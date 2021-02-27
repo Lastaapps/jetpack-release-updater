@@ -6,7 +6,7 @@ import java.net.URL
 
 /**
  * Checks all the libs given
- * @return map with entries - library as the key and boolean value with the resutl
+ * @return map with entries - library as the key and boolean value with the result
  * */
 fun checkAllLibs(libs: List<Library>): HashMap<Library, Boolean> {
 

@@ -1,6 +1,6 @@
 # Jetpack release updater
 
-This app has been created as an extension for [Jetpack release tracket](https://github.com/lmj0011/jetpack-release-tracker/) ([my fork](https://github.com/Lastaapps/jetpack-release-tracker)) for updating ```name.lmj0011.jetpackreleasetracker.helpers.AndroidXLibraryDataset.kt``` file. It creates Kotlin object with info about ```androidx``` packages in Google Maven repository. See an output example.
+This app has been created as an extension for [Jetpack release tracker](https://github.com/lmj0011/jetpack-release-tracker/) ([my fork](https://github.com/Lastaapps/jetpack-release-tracker)) for updating ```name.lmj0011.jetpackreleasetracker.helpers.AndroidXLibraryDataset.kt``` file. It creates a Kotlin object with info about ```androidx``` packages in Google Maven repository. See an output example.
 
 ```kotlin
 package name.lmj0011.jetpackreleasetracker.helpers
@@ -23,21 +23,22 @@ object AndroidXLibraryDataset {
             "group-index.xml url",
             "developer.android.com release url",
             "package.name",
-            listOf("artifat1", "artifat2", "artifat3"),
-        ),...
+            listOf("artifact1", "artifact2", "artifact3"),
+        ),
     )
 }
 ```
 
 ## Usage
 
-You can just run main function in ```cz.lastaapps.jetpackreleaseupdater.Main.kt``` or update constants located in this file. Using them, you can customize output parameters like ```fileName```, ```packageName```, ```className``` and ```libClassName```.
+You can just run main function in ```cz.lastaapps.jetpackreleaseupdater.Main.kt``` or update constants located in that file. Using them, you can customize output parameters like ```fileName```, ```packageName```, ```className``` and ```libClassName```.
 
 
 
 ## Validity check
 
-App automatically checks if the URLs are valid. If not, you will be prompted in logs. You can disable this behavior in ```Main.kt``` . Know issues are, that ```androidx.gaming``` and ```androidx.ui``` generates 'invalid' URLs. But they still redirect to the right location.
+App automatically checks if the URLs are valid. If not, it will be prompted in logs. You can disable this behavior in ```Main.kt``` .
+Know issue is, that ```androidx.gaming``` and ```androidx.ui``` generates redirection URLs. They work, but the check reports them.
 
 
 
