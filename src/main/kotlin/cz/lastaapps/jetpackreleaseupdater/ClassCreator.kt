@@ -51,7 +51,7 @@ private fun export(lib: Library): String {
         |            "${lib.groupIndexUrl}",
         |            "${lib.releasePageUrl}",
         |            "${lib.packageName}",
-        |            ${lib.artifactsString()},
+        |            ${lib.artifactsString()}
         |        ),
     """.trimMargin()
 }

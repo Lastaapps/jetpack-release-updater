@@ -27,7 +27,7 @@ fun parseMaster(input: InputStream): List<String> {
             list.add(nNode.nodeName)
     }
 
-    return list
+    return list.sorted()
 }
 
 fun parseGroup(xml: String): List<String> = parseGroup(ByteArrayInputStream(xml.toByteArray()))
@@ -50,5 +50,5 @@ fun parseGroup(input: InputStream): List<String> {
             list.add(nNode.nodeName)
     }
 
-    return list
+    return list.sorted()
 }

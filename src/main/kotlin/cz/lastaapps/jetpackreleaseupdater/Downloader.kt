@@ -60,7 +60,7 @@ private fun loadGroup(url: String): List<String> {
  * Creates url of the package given in google maven repository
  * */
 private fun artifactsUrl(artifact: String): String {
-    var url = "https://dl.google.com/android/maven2/"
+    var url = "https://dl.google.com/dl/android/maven2/"
     val parts = artifact.split(".")
 
     for (part in parts)
